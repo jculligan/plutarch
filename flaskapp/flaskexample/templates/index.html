@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+{% block content %}
+<main class="container">
+
+    <div class="starter-template">
+        <h2>Welcome to Plutarch</h2>
+        <p>Plutarch is a semantic search engine designed to find related people, places, or events,
+        based on the related words used to describe the historical entities you are most interested in. Want to find new podcasts
+      on malelovent dictators? Try searching 'Caligula'. Want to learn more about famous ambushes? Try searching 'Battle of the Teutoburg Forest'.
+    Whatever you're inerested in, find new content to keep on learning!</p>
+    </div>
+
+    <div class = "container">
+
+      <form  action="/output" method="GET">
+        <div class="form-group">
+          <label for="search_entry">Enter your historical interest:</label>
+          <input type="text" id="search_entry" name='search_entry' placeholder="e.g. Julius Caesar">
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-default btn-lg">Click to find new content!</button>
+          <br><br><br><br>
+        </div>
+
+        <div class="starter-template">
+            <p>Please ensure your spelling is correct or the app won't work correctly!</p>
+        </div>
+
+        <div class = "container">
+
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  </main> <!-- /.container-->
+
+{% endblock %}
